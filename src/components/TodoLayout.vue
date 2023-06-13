@@ -37,7 +37,6 @@
                   name=""
                   :id="item.id"
                   :checked="item.checked"
-                  @click="completedTask(item.id)"
                 />
                 <span></span>
                 {{ item.title }}
