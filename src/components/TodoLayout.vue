@@ -87,14 +87,8 @@ export default {
       }
     },
     addTask(event) {
-      if (event.code === "Enter" && this.todoPost.trim()) {
-        this.todoItems.push({
-          id: Date.now(),
-          title: this.todoPost,
-          checked: false,
-        })
-        this.todoPost = ""
-      }
+      if (event.code === "Enter") {
+ this.createdTodoPost()
     },
     removeTodo(id) {
       this.todoItems = this.todoItems.filter((todo) => todo.id !== id)
